@@ -112,7 +112,8 @@ if (isset($_POST['mediawiki'])) {
         "<\/pre>"=>"<\/code>"
     );
     $_POST['mediawiki'] = stripslashes($_POST['mediawiki']);
-    $dokuwiki = split("\r\n",stripslashes($_POST['mediawiki']));
+    //$dokuwiki = split("\r\n",stripslashes($_POST['mediawiki']));
+    $dokuwiki = explode("\r\n",stripslashes((string) $_POST['mediawiki']));   
     if(!empty($dokuwiki)) foreach($replacements as $k=>$v){
         for($i=0;$i<count($dokuwiki);$i++)
             $dokuwiki = preg_replace('/'.$k.'/',$v,$dokuwiki);
