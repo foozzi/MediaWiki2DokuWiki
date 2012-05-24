@@ -128,7 +128,7 @@ if (isset($_POST['mediawiki'])) {
 
 <h2 class="span2" >Mediawiki:</h2>
 <form class="span2" action="" method="post">
-<textarea style="WIDTH: 500px; HEIGHT: 300px" name="mediawiki"><?php echo $_POST['mediawiki'] ?></textarea>
+<textarea style="WIDTH: 500px; HEIGHT: 300px" name="mediawiki"><?php //echo $_POST['mediawiki'] ?></textarea>
 <input class="btn" type="submit" value="Конвертировать">
 </form>
     <!-- Le javascript
